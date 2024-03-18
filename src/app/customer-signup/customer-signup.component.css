@@ -1,0 +1,22 @@
+.parent{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-image: url("../../assets/signup\ bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.child{
+
+  width: 350px;
+  height: 500px;
+  background: white;
+}
+.greenBorder{
+  outline: none;
+  border: none;
+  width: 250px;
+  border-bottom: 2px solid  #39DB4A;
+}
