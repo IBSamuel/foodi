@@ -1,0 +1,24 @@
+.mainDiv{
+  display: flex;
+  /* justify-content: center; */
+  height: 100vh;
+  align-items: start;
+  background-image: url("https://img.freepik.com/free-photo/assortment-vegetables-herbs-spices_123827-21760.jpg?t=st=1710781001~exp=1710784601~hmac=4e3bf7215cce59ad4deca3d90d74c65f26e398eaba9cd071c84023c56cc7fab5&w=826");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.subDiv{
+
+  width: 350px;
+  height: 600px;
+  background-color:rgba(0,0,0,0.7);
+/* transparent black background */
+
+    /* backdrop-filter:blur(10px); */
+}
+.whiteBorder{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid white;
+}
