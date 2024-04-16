@@ -1,66 +1,57 @@
 <section class="shadow p-3 w-75">
+  <form action="">
   <div class="row bg-white">
-
     <div class="col-lg-6">
       <img src="../../assets/Group 20.png" alt="">
       <p class="h1 text-center">Add food Details</p>
       <div class="w-50 mx-auto">
-
         <div class="mb-3 mt-5 ">
-          <input type="text" class="mt-3 greenBorder" placeholder="Food Name"><br>
-          <input type="text" class="mt-3 greenBorder" placeholder="Food Amount"><br>
-          <input type="text" class="mt-3 greenBorder" placeholder="Number of plates"><br>
-          <input type="text" class="mt-3 greenBorder" placeholder="Food id"><br>
-          <input type="text" class="mt-3 greenBorder" placeholder="Food Ingredient"><br><br>
-          <textarea class="greenfullBorder" placeholder="Food Description" id="" cols="30" rows="10"></textarea>
+          <input type="text" class="mt-3 greenBorder" placeholder="Food Name" [(ngModel)]="foodName"><br>
+          <input type="text" class="mt-3 greenBorder" placeholder="Food Amount" [(ngModel)]="foodAmount"><br>
+          <input type="text" class="mt-3 greenBorder" placeholder="Number of plates" [(ngModel)]="numberOfPlates"><br>
+          <input type="text" class="mt-3 greenBorder" placeholder="Food id" [(ngModel)]="foodId"><br>
+          <input type="text" class="mt-3 greenBorder" placeholder="Food Ingredient" [(ngModel)]="foodIngredient"><br><br>
+          <textarea class="greenfullBorder" placeholder="Food Description" [(ngModel)]="foodDescription" cols="30" rows="10"></textarea>
         </div>
-
       </div>
     </div>
-
     <div class="col-lg-6 border">
-      <!-- First Image -->
       <div class="frame border">
         <div class="center">
           <div class="title">
             <p>Upload food picture 1</p>
           </div>
-
           <div class="dropzone">
             <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-            <input type="file" class="upload-input" id="fileInput" />
+            <input type="file" class="upload-input" id="fileInput1" (change)="onFileSelected($event, 'image1')" />
           </div>
         </div>
       </div>
-      <!-- First Image -->
-      <!-- Second Image -->
+      <!-- Add similar sections for other images -->
+      <div class="frame border">
+        <div class="center">
+          <div class="title">
+            <p>Upload food picture 2</p>
+          </div>
+          <div class="dropzone">
+            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+            <input type="file" class="upload-input" id="fileInput2" (change)="onFileSelected($event, 'image2')" />
+          </div>
+        </div>
+      </div>
       <div class="frame border">
         <div class="center">
           <div class="title">
             <p>Upload food picture 3</p>
           </div>
-
           <div class="dropzone">
             <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-            <input type="file" class="upload-input" id="fileInput1" />
-          </div>
-        </div>
-      </div>
-      <!-- Second Image -->
-      <!-- Third Image -->
-      <div class="frame border">
-        <div class="center">
-          <div class="title">
-            <p>Upload food picture 3</p>
-          </div>
-
-          <div class="dropzone">
-            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-            <input type="file" class="upload-input" id="fileInput1" />
+            <input type="file" class="upload-input" id="fileInput3" (change)="onFileSelected($event, 'image3')" />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <p class="p-2 green text-white rounded w-25 text-center mx-auto">Submit</p>
+  <p class="p-2 green text-white rounded w-25 text-center mx-auto" (click)="submitForm()">Submit</p>
+</form>
 </section>

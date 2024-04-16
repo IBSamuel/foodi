@@ -9,17 +9,23 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UploadComponent } from './upload/upload.component';
 
 export const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path:'views', component:ViewProductComponent},
-  {path:'customer',children:[
-    {path:"signup", component:CustomerSignupComponent},
-    {path:"signin", component:CustomerSigninComponent}
-  ]},
-  {path:'uploads', component:UploadComponent},
-  {path:'admin',children:[
-    {path:"signup", component:AdminSignupComponent},
-    {path:"signin", component:AdminSigninComponent},
-    {path:"dashboard", component:AdminDashboardComponent}
-  ]}
-
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'views', component: ViewProductComponent },
+  {
+    path: 'customer',
+    children: [
+      { path: 'signup', component: CustomerSignupComponent },
+      { path: 'signin', component: CustomerSigninComponent }
+    ]
+  },
+  { path: 'uploads', component: UploadComponent },
+  {
+    path: 'admin',
+    children: [
+      { path: 'signup', component: AdminSignupComponent },
+      { path: 'signin', component: AdminSigninComponent },
+      { path: 'dashboard', component: AdminDashboardComponent }
+    ]
+  }
 ];

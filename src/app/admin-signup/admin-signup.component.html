@@ -6,11 +6,11 @@
         <div class="text-white text-center subDiv  my-5">
           <p class="h1 pt-5">Hello</p>
           <p>Signup and upload your kindly<br> delicious delicacies</p>
-          <input type="text" class="whiteBorder text-white m-3" placeholder="Full Name"><br>
-          <input type="text" class="whiteBorder text-white m-3" placeholder="User Name"><br>
-          <input type="email" class="whiteBorder text-white m-3" placeholder="email"><br>
-          <input type="password" class="whiteBorder text-white m-3" placeholder="password"><br>
-          <button class="m-3 btn btn-light">Sign Up</button><br>
+          <input type="text" class="whiteBorder text-white m-3" placeholder="Full Name" [(ngModel)]="fullName"><br>
+          <input type="text" class="whiteBorder text-white m-3" placeholder="User Name" [(ngModel)]="userName"><br>
+          <input type="email" class="whiteBorder text-white m-3" placeholder="Email" [(ngModel)]="email"><br>
+          <input type="password" class="whiteBorder text-white m-3" placeholder="Password" [(ngModel)]="password"><br>
+          <button class="m-3 btn btn-light" (click)="signUp()">Sign Up</button><br>
           <p>Already have an <span>Log in</span></p>
         </div>
       </div>
