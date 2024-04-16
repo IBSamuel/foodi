@@ -6,6 +6,7 @@ import { CustomerSigninComponent } from './customer-signin/customer-signin.compo
 import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UploadComponent } from './upload/upload.component';
 
 export const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
     {path:"signup", component:CustomerSignupComponent},
     {path:"signin", component:CustomerSigninComponent}
   ]},
+  {path:'uploads', component:UploadComponent},
   {path:'admin',children:[
     {path:"signup", component:AdminSignupComponent},
     {path:"signin", component:AdminSigninComponent},
