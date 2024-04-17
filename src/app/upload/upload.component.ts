@@ -2,6 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../services/service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload',
@@ -11,7 +12,7 @@ import { ServiceService } from '../services/service.service';
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent {
-  constructor(public http: HttpClient, public service: ServiceService) { }
+  constructor(public http: HttpClient, public service: ServiceService,public router :Router) { }
   foodName: string = '';
   foodAmount: string = '';
   numberOfPlates: string = '';
@@ -35,10 +36,24 @@ export class UploadComponent {
       image3Data: this.image3Data,
     };
     console.log('All Details:', response);
-    this.http.post(`${this.service.backendUrl}/product.php`, response).subscribe(data=>{
+    this.http.post(`${this.service.backendUrl}/product.php`, response).subscribe(data => {
       console.log(data);
+      alert('Image uploaded successfully');
+      this.clearForm();
+    });
+    this.router.navigate(["/menu"]);
+  }
 
-    })
+  clearForm() {
+    this.foodName = '';
+    this.foodAmount = '';
+    this.numberOfPlates = '';
+    this.foodId = '';
+    this.foodIngredient = '';
+    this.foodDescription = '';
+    this.image1Data = null;
+    this.image2Data = null;
+    this.image3Data = null;
   }
 
   onFileSelected(event: any, imageNumber: string) {
