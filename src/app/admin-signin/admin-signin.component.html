@@ -6,9 +6,11 @@
         <div class="text-white text-center subDiv  my-5">
           <p class="h1 pt-5">Hello</p>
           <p>Signup and upload your kindly<br> delicious delicacies</p>
-          <input type="text" class="whiteBorder text-white m-3" placeholder="User Name"><br>
-          <input type="password" class="whiteBorder text-white m-3" placeholder="password"><br>
-          <button class="m-3 btn btn-light">Sign In</button><br>
+          <input type="text" class="whiteBorder text-white m-3" placeholder="User Name" [(ngModel)]="userName"><br>
+          <input type="password" class="whiteBorder text-white m-3" placeholder="Password" [(ngModel)]="password"><br>
+          <p class="text-danger">{{ errorMessage }}</p>
+          <button class="m-3 btn btn-light" (click)="signIn()">Sign In</button><br>
+          <p class="btn" [routerLink]="['/admin/signup']">No Account yet Kindly Sign up</p>
         </div>
       </div>
       <div class="col-lg-6 col-sm-12"></div>

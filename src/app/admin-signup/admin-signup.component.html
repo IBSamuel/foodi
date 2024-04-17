@@ -11,7 +11,7 @@
           <input type="email" class="whiteBorder text-white m-3" placeholder="Email" [(ngModel)]="email"><br>
           <input type="password" class="whiteBorder text-white m-3" placeholder="Password" [(ngModel)]="password"><br>
           <button class="m-3 btn btn-light" (click)="signUp()">Sign Up</button><br>
-          <p>Already have an <span>Log in</span></p>
+          <p [routerLink]="['/admin/signin']" class="btn"> Already have an Log in</p>
         </div>
       </div>
       <div class="col-lg-6 col-sm-12"></div>

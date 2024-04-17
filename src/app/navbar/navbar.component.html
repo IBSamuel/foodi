@@ -24,10 +24,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-5 " href="#">
+              <a class="nav-link me-5" [routerLink]="['/menu']">
                 Menu
               </a>
             </li>
+
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle me-5"
@@ -36,27 +37,23 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Services
+                sign in
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Action
+                  <a class="dropdown-item" [routerLink]="['/admin/signin']">
+                    admin
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
+                  <a class="dropdown-item" [routerLink]="['/customer/signin']">
+                    user
                   </a>
                 </li>
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
+               
               </ul>
             </li>
             <li class="nav-item me-5">

@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<section class="m-5">
+  <p class="h1">Our Menu</p>
+  <div class="ms-5">
+    <div class="card border-0 rounded rounded-5 shadow" style="width: 18rem;" *ngFor="let product of products">
+      <div style="position: relative;">
+        <img src={{product.product_image}} class="card-img-top" alt="...">
+        <button type="button" class="green px-3 py-2" style="position: absolute; top: 0; right: 0; z-index: 1;border-bottom-left-radius: 30px;">
+          <i class="bi bi-heart"></i>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">{{product.product_name}}</h5>
+        <p class="disable">Description of the item</p>
+        <p class="card-text fw-semibold font-normal text-dark"><span class="text-danger">$</span>{{product.product_amount}}</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>

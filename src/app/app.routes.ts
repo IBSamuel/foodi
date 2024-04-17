@@ -7,11 +7,13 @@ import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UploadComponent } from './upload/upload.component';
+import { MenuComponent } from './menu/menu.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'views', component: ViewProductComponent },
+  { path: 'menu', component: MenuComponent },
   {
     path: 'customer',
     children: [
