@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class ServiceService {
 
-  backendUrl = "http://localhost/foodi";
+  backendUrl = "http://foodi.atwebpages.com";
   constructor() {
   }
-  
+
 }

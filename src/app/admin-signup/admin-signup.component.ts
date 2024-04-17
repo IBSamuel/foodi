@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../services/service.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+//
 
 @Component({
   selector: 'app-admin-signup',
@@ -12,7 +13,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './admin-signup.component.css'
 })
 export class AdminSignupComponent {
-  constructor(public http: HttpClient, public service: ServiceService) { }
+  constructor(public http: HttpClient, public service: ServiceService,public router:Router ) { }
 
   fullName: string = '';
   userName: string = '';
@@ -30,6 +31,7 @@ export class AdminSignupComponent {
     console.log('Admin Info:', adminInfo);
     this.http.post(`${this.service.backendUrl}/admin.php`, adminInfo).subscribe(data=>{
       console.log(data);
+      this.router.navigate(["/admin/signin"]);
     });
   }
 }
